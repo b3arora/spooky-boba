@@ -1,0 +1,549 @@
+:root {
+  --color-bg: #8a3131;
+  --color-text-main: #000000;
+  --color-text-header: #000000;
+  --color-primary: #bd4931;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+@font-face {
+  font-family: Cormorant-Garamond;
+  src: url("https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/CormorantGaramond-Regular.ttf?v=1728635387422")
+    format("truetype");
+}
+
+@font-face {
+  font-family: Pixel;
+  src: url("https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/PixelifySans-VariableFont_wght.ttf?v=1728683629096")
+    format("truetype");
+}
+
+/* Our remix on glitch button */
+.btn--remix {
+  font-family: Pixel;
+  position: absolute;
+  left: 46%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2.75rem;
+  align-items: center;
+  cursor: pointer;
+  background: #69527c;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #f6f6f6;
+  white-space: nowrap;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+.btn--remix img {
+  width: 20px;
+  margin-right: 0.5rem;
+}
+.btn--remix:hover {
+  background-color: #f6f6f6;
+}
+
+/* Navigation grid */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
+
+.footer a:not(.btn--remix):link,
+a:not(.btn--remix):visited {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  border-style: none;
+}
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  font-family: Pixel;
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  color: black;
+  opacity: 0.5;
+  /*font-family: Pixel;*/
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 105%;
+  position: absolute;
+  width: 40%;
+  height: 70vh;
+  margin: 0;
+  text-align: center;
+}
+
+.advice {
+  color: black;
+  opacity: 0.5;
+  font-weight: normal;
+  text-align: center;
+  height: 50vh;
+}
+
+.audio {
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+}
+
+.door-closed {
+  z-index: -2;
+  position: absolute;
+  bottom: 10%;
+  width: 200px;
+  height: 400px;
+}
+
+.door-open {
+  z-index: -2;
+  position: absolute;
+  bottom: 10%;
+  width: 200px;
+  height: 400px;
+}
+
+.skeleton {
+  z-index: -1;
+  position: absolute;
+  bottom: 5%;
+  left: 35%;
+  /*width: 200px;*/
+  animation: guard 1s linear infinite;
+}
+@keyframes guard {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* Very light scaling for our illustration */
+.ghost {
+  opacity: 0.7;
+  position: absolute;
+  top: 150px;
+  width: 30%;
+}
+
+.spiderweb {
+  width: 70px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.bat {
+  width: 20px;
+  position: absolute;
+  top: 50px;
+  right: 110px;
+  animation: float 3s ease-in-out infinite; /* Apply the animation */
+}
+
+.battwo {
+  width: 60px;
+  position: absolute;
+  top: 5px;
+  right: 65px;
+  animation: floattwo 7s ease-in-out infinite; /* Apply the animation */
+}
+
+.batthree {
+  width: 60px;
+  position: absolute;
+  top: 40px;
+  left: 25%;
+  animation: float 3s ease-in-out infinite; /* Apply the animation */
+}
+
+.batfour {
+  width: 40px;
+  position: absolute;
+  top: 20px;
+  left: 40%;
+  animation: floattwo 5s ease-in-out infinite;
+  /*transform: scaleX(-1);*/
+}
+
+@keyframes floattwo {
+  0% {
+    transform: translateX(0); /* Start at original position */
+  }
+  20% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateX(-7px);
+  }
+  100% {
+    transform: translateY(0px); /* Return to original position */
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0); /* Start at original position */
+  }
+  20% {
+    transform: translateX(2px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px); /* Return to original position */
+  }
+}
+
+.spider {
+  width: 35px;
+  position: absolute;
+  top: 42px;
+  right: 7px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.pumpkinone {
+  width: 100px;
+  position: absolute;
+  bottom: -5px;
+  right: 1px;
+  animation: rise-up 1s linear;
+}
+
+.skip button {
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  bottom: 115px;
+  right: 27px;
+  text-align: center;
+  line-height: 10px;
+  cursor: pointer;
+  animation: skip-button 4s linear;
+}
+
+.skip {
+  font-size: 10px;
+  background-color: #d1b992;
+}
+
+.skip button:active {
+  transform: translateY(3px);
+}
+
+
+.textbox {
+  width: 250px;
+  height: 150px;
+  position: absolute;
+  bottom: -5px;
+  right: 80px;
+  padding: 20px -10px 10px 20px;
+  margin: 1px;
+  display: flex; /* Use flexbox to center the text */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  text-align: center;
+  animation: rise-up 1s linear;
+}
+
+.textbox p {
+  color: black;
+  font-size: 11px;
+}
+
+.zombie {
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  left: -110px;
+  bottom: -80px;
+}
+
+.zombie-text-box {
+  width: 220px;
+  height: 80px;
+  position: absolute;
+  left: 125px;
+  bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.zombie-txt {
+  font-size: 12px;
+  color: white;
+}
+
+.zombie-skip {
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  bottom: 180px;
+  left: 35px;
+  font-size: 10px;
+  text-align: center;
+  line-height: 10px;
+  cursor: pointer;
+  animation: skip-button 4s ease-out;
+}
+
+
+.zombie-skip button:active {
+  transform: translateY(30px);
+}
+
+@keyframes skip-button {
+  0% {
+    bottom: 0px;
+    opacity: 0;
+  }
+  99% {
+    bottom: 110px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 115px;
+    opacity: 1;
+  }
+}
+
+.yes-or-no-container {
+  position: absolute;
+  left: 165px;
+  bottom: 25px;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.yes-button {
+  width: 50px;
+  height: 30px;
+  font-size: 10px;
+  text-align: center;
+  display: grid;
+  left: 60px;
+  bottom: 80px;
+  cursor: pointer;
+}
+
+.yes-button button:active {
+  transform: translateY(5px);
+}
+
+.name-enter-container {
+  position: absolute;
+  left: 137px;
+  bottom: 38px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.name-enter {
+  width: 100px;
+  height: 20px;
+  font-size: 7px;
+  text-align: center;
+  display: grid;
+  left: 60px;
+  bottom: 80px;
+  cursor: pointer;
+}
+
+.riddle-answer-container {
+  position: absolute;
+  left: 137px;
+  bottom: 38px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.riddle-answer {
+  width: 100px;
+  height: 20px;
+  font-size: 7px;
+  text-align: center;
+  display: grid;
+  left: 60px;
+  bottom: 80px;
+}
+
+@keyframes rise-up {
+  0% {
+    bottom: -80px;
+  }
+  50% {
+    bottom: -40px;
+  }
+  100% {
+    bottom: -5px;
+    opacity: 1;
+  }
+}
+
+.tile {
+  width: 80px;
+  height: 60px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  z-index: 1;
+}
+
+.candy {
+  width: 30px;
+  position: absolute;
+  top: 23px;
+  left: 45px;
+  z-index: 2;
+}
+
+.score-candy {
+  font-size: 18px;
+  position: absolute;
+  top: 12px;
+  left: 21px;
+  z-index: 3;
+}
+
+.escape-button {
+  position: relative;
+  right: 25px;
+  top: 80px;
+}
+
+/* Button - Add it from the README instructions */
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+}
+
+/* Subheading */
+h2 {
+  color: var(--color-text-header);
+}
+
+/* Interactive image */
+.ghost:active {
+  transform: translateY(5px);
+}
+
+/* Button dip
+- Toggling this class on and off will move it down and up again
+- The button transition property above determines the speed of the translate (500ms)
+*/
+.dipped {
+  transform: translateY(5px);
+}
+
+/* Links that open files in the editor */
+.fileopener {
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 3px solid var(--color-primary);
+  color: var(--color-secondary);
+}
+.fileopener:hover {
+  border-bottom: 3px solid var(--color-secondary);
+}
