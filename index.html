@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--<link rel="icon" src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/pumpkinicon.png?v=1728647603635" />
+    <link rel="icon" href="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/pumpkinicon.png?v=1728647603635" />*/-->
+    <link
+      href="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
+      rel="stylesheet"
+    />
+    <title>boba manor</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    
+    <div class="wrapper">
+      <div class="content" role="main">
+        <h1 class="title">happy halloween!</h1>
+        <h5 class="advice">
+          play on desktop for best experience <br>
+          scroll down to play some tunes!
+        </h5>
+        <!-- creating an infinite loop of music using an mp3 file, defining the type to help the platform to identify whether it is compatible or not -->
+        <audio class="audio" controls>
+          <source
+            src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/halloween-background-247148.mp3?v=1728667678207"
+            type="audio/mpeg"
+          />
+          your browser does not support the audio element
+        </audio>
+        <!-- creating images, including a ghost, variations of a bat to reuse in different positions, a spiderweb, a spider and a pumpkin-->
+        <img src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/Picture1.png?v=1728838424330"
+             class="door-closed"
+             id="closed-door"
+             alt="image of a closed door"
+        />
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/thumbnails%2FScreenshot%202024-10-13%20172712.png?1728838439070"
+          class="door-open"
+          id="open-door"
+          alt="open door image" 
+        />
+        <img src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/skeleton.png?v=1728833524954"
+             class="skeleton"
+             id="skeleton-guard"
+             alt="skeleton guard image"
+        />
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/ghost.png?v=1728811161520"
+          class="ghost"
+          id="ghost-image"
+          alt="ghost image"
+          title="Click the image!"
+        />
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/bat.png?v=1728685304370"
+          class="bat"
+          alt="bat image"
+        />
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/bat.png?v=1728685304370"
+          class="battwo"
+          alt="bat image"
+        />
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/bat.png?v=1728685304370"
+          class="batthree"
+          alt="bat image"
+        />
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/bat.png?v=1728685304370"
+          class="batfour"
+          alt="bat image"
+        />
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/spiderweb-2.png?v=1728689444792"
+          class="spiderweb"
+          alt="spider web image"
+        />
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/spider2.png?v=1728690642371"
+          class="spider"
+          alt="spider image"
+        />
+
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/text-box2.png?v=1728722174458"
+          class="textbox"
+          id="textbox"
+          alt="text box image"
+        />
+        <div class="textbox">
+          <p id="text-content">
+            welcome to b3arora's <br /> manor!
+          </p>
+        </div>
+
+        <div class="skip" id="skipButton">
+          <button>skip</button>
+        </div>
+
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/pumpkin.png?v=1728692744662"
+          class="pumpkinone"
+          id="pumpkin"
+          alt="pumpkin image"
+        />
+
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/zombie-girl.png?v=1728812383523"
+          class="zombie"
+          id="zombie-grl"
+          alt="zombie girl image"
+        />
+        <button id="zombieSkipButton" class="zombie-skip">
+          skip
+        </button>
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/blue-text.png?v=1728815289147"
+          class="zombie-text-box"
+          id="zombie-text-b"
+          alt=""
+        />
+        <div class="zombie-text-box">
+            <p class="zombie-txt" id="zombie-text">
+              hello...
+          </p> 
+        </div>
+        <div class="name-enter-container">
+          <input type="text" class="name-enter" id="input-space" placeholder="enter name...">
+          <button class="name-enter" id="enter-button">
+             enter
+          </button>
+        </div>
+        
+        <div class="riddle-answer-container">
+          <input type="text" class="riddle-answer" id="riddle-enter" placeholder="enter answer...">
+          <button class="riddle-answer" id="riddle-check">
+             check
+          </button>
+        </div>
+        <div class="yes-or-no-container">
+          <button class="yes-button" id="yes">
+            yes
+          </button>
+          <a class="no-button" id="no" href="https://manor.hackclub.com" style="display: inline-block; padding: 8px 15px; background-color: white; color: black; text-decoration: none; border-radius: 5px; text-align: center; font-size: 10px; margin-left: 50px; border: 1px solid black;">
+            no
+          </a>
+        </div>
+
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/candy.png?v=1728759257690"
+          class="candy"
+          alt="candy icon"
+        />
+        <p class="score-candy" id="score">0</p>
+        <img
+          src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/tile.webp?v=1728759267620"
+          class="tile"
+          alt=""
+        />
+        <a class="escape-button" id="escape" href="https://manor.hackclub.com" style="display: inline-block; padding: 8px 15px; background-color: white; color: black; text-decoration: none; border-radius: 5px; text-align: center; font-size: 10px; margin-left: 50px; border: 1px solid black;">
+            escape the manor
+        </a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="links"></div>
+      <a
+        class="btn--remix"
+        target="_top"
+        href="https://en.wikipedia.org/wiki/Halloween"
+      >
+        <img
+            src="https://cdn.glitch.global/958bb4e0-7305-4c62-ae39-fc1e2e733eb8/ghost.png?v=1728811161520"
+            class= "ghost-icon"
+            alt=""
+        />
+        click me!
+      </a>
+    </footer>
+  </body>
+</html>
