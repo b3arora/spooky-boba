@@ -109,7 +109,6 @@ document.getElementById("input-space").style.display = "none";
 document.getElementById("enter-button").style.display = "none";
 document.getElementById("riddle-enter").style.display = "none";
 document.getElementById("riddle-check").style.display = "none";
-document.getElementById("ghost-image").style.display = "none";
 document.getElementById("zombieSkipButton").style.display = "none";
 document.getElementById("open-door").style.display = "none";
 document.getElementById("yes").style.display = "none";
