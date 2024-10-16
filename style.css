@@ -434,14 +434,13 @@ body {
   margin-right: 10px;
 }
 .name-enter {
-  width: 150px;
-  height: 30px;
+  width: 100px;
+  height: 20px;
   font-size: 7px;
   text-align: center;
   display: grid;
   left: 60px;
   bottom: 80px;
-  margin-right: 10px;
   cursor: pointer;
 }
 
@@ -454,14 +453,13 @@ body {
   margin-right: 10px;
 }
 .riddle-answer {
-  width: 150px;
-  height: 30px;
+  width: 100px;
+  height: 20px;
   font-size: 7px;
   text-align: center;
   display: grid;
   left: 60px;
   bottom: 80px;
-  margin-right: 10px;
 }
 
 @keyframes rise-up {
