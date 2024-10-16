@@ -38,7 +38,7 @@ const answers = [
   "skull",
   "shadow",
   "mirror",
-  "stars moon dark darkness",
+  "stars",
   "wind",
   "c and y",
   "echo",
