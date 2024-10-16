@@ -13,7 +13,8 @@ const greetings = [
   "i'm zombie girl...",
   "i'm zombie girl...",
   "UGH (¬_¬) ok...<br> answer these <br> riddles or whatever...",
-  "...no need to use 'a' or 'an <br> in your answers... but <br> you'll haver to use 'and' in one",
+  "...no need to use 'a' or 'an <br> in your answers...",
+  "...but <br> you'll have to use 'and' in one",
   "no capital letters...",
   "...so lame...",
   "...wait",
@@ -25,9 +26,9 @@ const riddles = [
   "i don't have eyes, but once i did see. once i had thoughts, but now i am empty. what am i?",
   "i creep up yours stairs, down the hallways behind you. wherever you are, i'm there beside you. what am i?",
   "look in my face, i am somebody. look in my back, i am nobody. what am i?",
-  "i come in the night without being ask, and leave in the morning without being taken. what am i?",
+  "i come in the night without being asked, and leave in the morning without being taken. what am i?",
   "you can hear me, feel me and know that i'm there. but you'll never find me...what am i?",
-  "which two letters can you spell candy with?",
+  "which two letters <br> can you spell candy with?",
   "you hear me once, and then once more. but then i die, til you call like before. what am i?",
   "i have 13 hearts, yet no other organs. what am i?"
 ];
@@ -67,7 +68,7 @@ const answerWrong3 = `you are NOT getting the <br> hang of this...the <br> answe
 const answerWrong4 = `seriously..? even a zombie would've said ${
   answers[answerIndex + 3]
 }...<br> and they dont have brains`;
-const answerWrong5 = `wait...do zombies have brains..? <br> anyway the answer was <br> ${
+const answerWrong5 = `seems like you're as <br> brainless as a skeleton <br> anyway the answer was <br> ${
   answers[answerIndex + 4]
 }`;
 const answerWrong6 = `${answers[answerIndex + 5]}...`;
