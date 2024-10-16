@@ -68,7 +68,7 @@ const answerWrong3 = `you are NOT getting the <br> hang of this...the <br> answe
 const answerWrong4 = `seriously..? even a zombie would've said ${
   answers[answerIndex + 3]
 }...<br> and they dont have brains`;
-const answerWrong5 = `seems like you're as <br> brainless as a skeleton <br> anyway the answer was <br> ${
+const answerWrong5 = `well...atleast you tried...<br> the answer was <br> ${
   answers[answerIndex + 4]
 }`;
 const answerWrong6 = `${answers[answerIndex + 5]}...`;
