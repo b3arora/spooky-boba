@@ -77,7 +77,7 @@ const answerWrong8 = `... <br> it was ${
   answers[answerIndex + 7]
 }...<br> oh and the last one was ${
   answers[answerIndex + 6]
-}<br>cause you got both wrong...`;
+}<br>if you got both wrong...`;
 const answerWrong9 = "bad luck. <br> it was a deck of cards."
 
 // Create the wrongResponses array
