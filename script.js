@@ -250,6 +250,7 @@ function finale() {
   const intNumber = parseInt(textNumber.textContent);
   if (intNumber >= 10) {
     setInterval(() => {
+      document.getElementById("skeleton-guard").style.display = "none";
       document.getElementById("closed-door").style.display = "none";
       document.getElementById("riddle-enter").style.display = "none";
       document.getElementById("riddle-check").style.display = "none";
