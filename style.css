@@ -154,6 +154,12 @@ body {
   height: 50vh;
 }
 
+.audio {
+  position: absolute;
+  right: 15px;
+  top: 40px;
+}
+
 .door-closed {
   z-index: -2;
   position: absolute;
